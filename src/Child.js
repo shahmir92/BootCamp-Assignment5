@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ValueContext from './ValueContext';
 
 function Child() {
-    let value = React.useContext(ValueContext);
-    return(
+    let value = useContext(ValueContext);
+    return (
         <div>
-            YOU ARE IN CHILD VARIABLE PASSED TO CHILD IS : {value} 
+            {value[0]}
+        <button onClick = {() => value[1](++value[0])} >
+            Update Value
+        </button>
         </div>
     );
 }
  export default Child;
+
+ //
