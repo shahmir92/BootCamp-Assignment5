@@ -5,9 +5,8 @@ import Child from './Child'
 function Parent(props) {
     return(
         <div>
-            You are in Parent
-            <Child num = {props.num} >
-            </Child>
+            Hey there You are in Parent
+            <Child/>
         </div>
     )
 }
